@@ -1,0 +1,37 @@
+<div style="overflow: hidden; text-align: center;">
+  <table>
+    <tr>
+      <th>Categorias</th>
+      <th>Materiais</th>
+      <th>Acabamentos</th>
+    </tr>
+    <tr class="listas">
+      <td>
+        <ul>
+          <li *ngFor="let cat of categorias"(click)="removeCategoria(cat)">{{cat.descricao}}</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li *ngFor="let mat of materials"(click)="removeMaterial(mat)">{{mat.descricao}}</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li *ngFor="let acab of acabamentos" (click)="removeAcabamento(acab)">{{acab.descricao}}</li>
+        </ul>
+      </td>
+    </tr>
+    <tr class="btns">
+      <td routerLink="/categoria/add">Add Categorias</td>
+      <td routerLink="/material/add">Add Materiais</td>
+      <td routerLink="/acabamento/add">Add Acabamentos</td>
+    </tr>
+    <tr>
+      <td style="height: 10px;" colspan=3></td>
+    </tr>
+    <tr class="btns">
+      <td colspan=3 routerLink="/detail/-1">Add Produto</td>
+    </tr>
+  </table>
+</div>

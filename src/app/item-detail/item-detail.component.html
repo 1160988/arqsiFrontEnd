@@ -1,0 +1,49 @@
+<div style="width: 60%;" class="container">
+  <div class="produtos">
+    <h2>Item de Produto</h2>
+  </div>
+  <div class="produtos">
+    <p class="title">Produto</p>
+    <select [(ngModel)]="item.idProduto" (change)="changeProduto(item.idProduto)">
+      <option *ngFor="let prod of produtos" value="{{prod.id}}">{{prod.nome}}</option>
+    </select>
+  </div>
+  <div class="produtos">
+    <p class="title">Material</p>
+    <select [(ngModel)]="item.idMaterial">
+      <option *ngFor="let mat of material" value="{{mat.id}}" selected>{{mat.descricao}}</option>
+    </select>
+  </div>
+  <div class="produtos">
+    <p class="title">Acabamento</p>
+    <select [(ngModel)]="item.idAcabamentoList" multiple>
+      <option *ngFor="let acab of acabamentos" value="{{acab.id}}">{{acab.descricao}}</option>
+    </select>
+  </div>
+  <div class="produtos">
+    <p class="title">Itens Agregados</p>
+    <select [(ngModel)]="item.listaItens" multiple>
+      <option *ngFor="let item of produtosAgregados" value="{{item._id}}">{{itemToString(item)}}
+      </option>
+    </select>
+  </div>
+  <div class="produtos">
+    <p class="title">Dimensões</p>
+    <div class="container_int">
+      <input [(ngModel)]="item.dimensoes.altura" type="number" placeholder="Altura" (change)="checkDim()" />
+      <input [(ngModel)]="item.dimensoes.largura" type="number" placeholder="Largura" (change)="checkDim()" />
+      <input [(ngModel)]="item.dimensoes.profundidade" type="number" placeholder="Profundidade" (change)="checkDim()" />
+    </div>
+  </div>
+  <div class="produtos">
+    <p class="title">Quantidade</p>
+    <div class="container_int">
+      <input [(ngModel)]="item.quantidade" type="number" placeholder="Quantidade" min="1" />
+      <input id="conf" type="button" value="Confirmar Item" (click)="saveItem()" />
+    </div>
+    <div class="container_int">
+      <input type="button" id="rmv" *ngIf="update" value="Remover Item" (click)="removeItem()" />
+    </div>
+  </div>
+  <p style="visibility: hidden;">spacer</p>
+</div>

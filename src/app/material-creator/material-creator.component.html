@@ -1,0 +1,15 @@
+<div id="container">
+  <h2>Crie um novo Material</h2>
+  <div id="inputs">
+    <p>Descrição</p>
+    <input type="text" [(ngModel)]="material.descricao" placeholder="Novo Material" />
+    <input type="button" value="Cancelar" id="back" (click)="goBack()" />
+    <input type="button" value="Adicionar" (click)="onClick()" />
+  </div>
+  <div id="acabamentos">
+    <p>Acabamentos Possíveis</p>
+    <select [(ngModel)]="material.acabamentos" multiple>
+      <option *ngFor="let acab of acabamentos" value="{{acab.id}}">{{acab.descricao}}</option>
+    </select>
+  </div>
+</div>

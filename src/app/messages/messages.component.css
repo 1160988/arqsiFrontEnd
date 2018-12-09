@@ -1,0 +1,53 @@
+    /* MessagesComponent's private CSS styles */
+
+    .main {
+      margin: 20px 20px;
+      padding: 0 20px;
+
+      border: 1px solid rgb(199, 199, 199);
+      position: absolute;
+      bottom: 0;
+    }
+
+    h2 {
+      color: red;
+      font-size: 16px;
+      font-weight: bolder;
+      text-transform: uppercase;
+      margin-bottom: 0;
+    }
+
+    button.clear {
+      font-family: Arial;
+      background-color: #eee;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 20px;
+      cursor: pointer;
+      cursor: hand;
+    }
+
+    button:hover {
+      background-color: #cfd8dc;
+    }
+
+    button:disabled {
+      background-color: #eee;
+      color: #aaa;
+      cursor: auto;
+    }
+
+    button.clear {
+      color: #888;
+      margin-bottom: 12px;
+    }
+
+    ul {
+      padding: 0;
+      margin-top: 0;
+      list-style-type: none;
+    }
+
+    li:nth-child(2n) {
+      background-color: rgb(241, 241, 241);
+    }

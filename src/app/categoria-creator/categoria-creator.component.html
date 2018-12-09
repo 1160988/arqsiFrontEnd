@@ -1,0 +1,16 @@
+<div id="container">
+  <h2>Crie uma nova categoria</h2>
+  <div id="inputs">
+    <p>Descrição</p>
+    <input type="text" [(ngModel)]="categoria.descricao" placeholder="Nova Categoria" />
+    <input type="button" value="Cancelar" id="back" (click)="goBack()" />
+    <input type="button" value="Adicionar" (click)="onClick()" />
+  </div>
+  <div id="acabamentos">
+    <p>Categoria Pai</p>
+    <select [(ngModel)]="categoria.categoriaPaiId">
+      <option value="null" disabled selected>Selecione Se Necessário</option>
+      <option *ngFor="let cat of categorias" value="{{cat.id}}">{{cat.descricao}}</option>
+    </select>
+  </div>
+</div>

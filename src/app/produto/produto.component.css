@@ -1,0 +1,58 @@
+div {
+  text-align: center;
+  margin-top: 5%;
+}
+
+table {
+  border-collapse: collapse !important;
+  border: none !important;
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 24px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
+  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.24), 0 9px 25px 0 rgba(0, 0, 0, 0.19);
+  transition: 0.3s;
+}
+
+table:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+th, td {
+  padding: 1% 0;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  color: white;
+  font-size: 32;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: #336699;
+}
+
+.rmv {
+  color: white;
+  padding-right: 10px;
+  font-weight: bolder;
+  transition: 0.3s;
+}
+
+tr {
+  transition: 0.3s;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+tr:hover>.rmv {
+  color: #f5f5f5;
+}
+
+tr:hover>.rmv:hover {
+  color: #750101;
+}

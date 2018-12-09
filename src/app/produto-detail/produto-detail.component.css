@@ -1,0 +1,114 @@
+h2 {
+  font-size: 40px;
+  font-weight: 600;
+  padding: 1% 0;
+  color: white;
+  text-align: center;
+  background-color: #336699;
+  text-transform: uppercase;
+}
+
+p {
+  font-weight: 300;
+  font-size: 28px;
+}
+
+.tbl_ctr {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 1%;
+  background-color: white;
+  transition: 0.3s;
+  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.24), 0 9px 25px 0 rgba(0, 0, 0, 0.19);
+}
+
+.tbl_ctr:hover {
+  box-shadow: 0 10px 14px 0 rgba(0, 0, 0, 0.24), 0 15px 30px 0 rgba(0, 0, 0, 0.19);
+}
+
+table {
+  width: 100%;
+  margin: 25px auto;
+  border-collapse: collapse !important;
+  transition: 0.3s;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+th, td {
+  padding: 10px 15px;
+  font-weight: normal;
+}
+
+th {
+  font-size: 28px;
+  font-weight: 300;
+  text-align: left;
+  padding: 0 25px;
+  border: none;
+}
+
+tr {
+  transition: 0.3s;
+}
+
+tr:hover {
+  cursor: pointer;
+}
+
+button {
+  border: none;
+  padding: 12px 25px;
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  display: block;
+  font-size: 14px;
+  text-decoration: none;
+  color: white;
+  background-color: rgb(51, 102, 153);
+  transition: 0.3s;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgb(17, 51, 90);
+}
+
+input, select {
+  border: none;
+  background-color: rgb(241, 241, 241);
+  padding: 10px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+select {
+  width: 100%;
+  border: 1px solid rgb(241, 241, 241);
+}
+
+select>* {
+  padding: 1%;
+}
+
+input:focus, select:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(124, 124, 124);
+}
+
+.container {
+  margin: 10px auto;
+}
+
+.clr_btn {
+  width: 100%;
+  padding: 33px 0;
+  font-weight: 300;
+  color: rgb(43, 43, 43);
+}
+
+.clr_btn:hover {
+  color: white;
+  cursor: pointer;
+  background-color: rgb(17, 51, 90);
+}

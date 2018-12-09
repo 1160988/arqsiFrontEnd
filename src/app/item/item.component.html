@@ -1,0 +1,11 @@
+<div style="width: 80%; margin: 30px auto;">
+  <div *ngFor="let item of items" routerLink="/item/edit/{{item._id}}" class="container">
+    <p><b>Produto</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{getProduto(item.idProduto).nome}} </p>
+    <p><b>Categoria</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{getProduto(item.idProduto).categoria.descricao}} </p>
+    <p><b>Material</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{getProduto(item.idProduto).material.descricao}} </p>
+    <p><b>Dimensões</b> &nbsp;&nbsp;&nbsp;{{item.dimensoes.altura}} x {{item.dimensoes.largura}} x
+      {{item.dimensoes.profundidade}}</p>
+    <p><b>Quantidade</b> &nbsp;&nbsp;{{item.quantidade}}</p>
+  </div>
+  <div class="container add" routerLink="/item/add" > <p>+</p> </div>
+</div>

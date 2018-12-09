@@ -1,0 +1,22 @@
+<div>
+  <table style="width:80%">
+    <tr>
+      <th colspan="2">Nome</th>
+      <th colspan="2">Categoria</th>
+      <th colspan="2">Material</th>
+      <th colspan="1">Altura</th>
+      <th colspan="1">Largura</th>
+      <th colspan="1">Profund.</th>
+      <th colspan="1"></th>
+    </tr>
+    <tr *ngFor="let produto of produtos">
+      <td colspan="2" routerLink="/detail/{{produto.id}}">{{produto.nome}}</td>
+      <td colspan="2" routerLink="/detail/{{produto.id}}">{{produto.categoria.descricao}}</td>
+      <td colspan="2" routerLink="/detail/{{produto.id}}">{{produto.material.descricao}}</td>
+      <td colspan="1" routerLink="/detail/{{produto.id}}">{{produto.dimensoes.dimAltura}}</td>
+      <td colspan="1" routerLink="/detail/{{produto.id}}">{{produto.dimensoes.dimLargura}}</td>
+      <td colspan="1" routerLink="/detail/{{produto.id}}">{{produto.dimensoes.dimProfundidade}}</td>
+      <td colspan="1" (click)="removeProduto(produto)" class="rmv">X</td>
+    </tr>
+  </table>
+</div>

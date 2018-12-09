@@ -1,0 +1,55 @@
+table {
+  width: 80%;
+  margin: 35px auto;
+  border-spacing: 10px 0;
+  border-collapse: separate;
+}
+
+th {
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 20px 0;
+  background-color: rgb(51, 102, 153);
+  color: white;
+}
+
+.listas>td>ul {
+  list-style-type: none;
+  vertical-align: top;
+  padding: 0;
+  background-color: white;
+  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.24), 0 9px 25px 0 rgba(0, 0, 0, 0.19);
+}
+
+.listas>td>ul{
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.listas>td>ul>li {
+  padding: 15px 0;
+  border-bottom: 1px solid rgb(199, 199, 199);
+  transition: 0.3s;
+}
+
+.listas>td>ul>li:hover {
+  color: white;
+  cursor: pointer;
+  background-color: #336699;
+}
+
+.btns>td {
+  font-weight: 300;
+  text-transform: uppercase;
+  padding: 15px 0;
+  color: white;
+  background-color: rgb(51, 102, 153);
+  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.24), 0 9px 25px 0 rgba(0, 0, 0, 0.19);
+  transition: 0.3s;
+}
+
+.btns>td:hover {
+  cursor: pointer;
+  background-color: rgb(39, 85, 131);
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.24), 0 17px 30px 0 rgba(0, 0, 0, 0.19);
+}

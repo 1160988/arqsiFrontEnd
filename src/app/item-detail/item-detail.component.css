@@ -1,0 +1,87 @@
+h2 {
+    font-size: 38px;
+    font-weight: 500;
+    padding: 45px 0;
+    padding-left: 10%;
+    margin-bottom: 0;
+    color: white;
+    text-transform: uppercase;
+    background-color: #336699;
+}
+
+input[type="button"] {
+    padding: 1%;
+    border: none;
+    border-right: 1px solid #336699;
+    color: white;
+    background-color: #336699;
+    transition: .3s;
+}
+
+input[type="button"]:hover {
+    cursor: pointer;
+    background-color: #123457;
+}
+
+.container {
+    width: 60%;
+    margin: 25px auto;
+    border-color: #bdbdbd;
+    background-color: white;
+    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.24), 0 9px 25px 0 rgba(0, 0, 0, 0.19);
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 400;
+    margin-left: 10%;
+}
+
+.container_int {
+    width: 80%;
+    margin: 0 10%;
+}
+
+.container_int>input[type="number"] {
+    width: 30%;
+    margin: 0;
+    margin-right: 1.6%;
+    font-size: 15px;
+    padding: 1%;
+}
+
+.container_int>input[type="number"]:last-child {
+    margin-right: 0;
+}
+
+.container_int>input[type="button"] {
+    width: 66%;
+    margin: 0;
+    font-size: 15px;
+}
+
+.produtos>select {
+    width: 80%;
+    margin: 0 10%;
+    border: 1px solid #7c7c7c;
+    font-size: 15px;
+    padding: 1%;
+}
+
+#conf {
+    font-size: 18px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+#rmv {
+    width: 100%;
+    margin-top: 10px;
+    color: white;
+    background-color: rgb(160, 19, 19);
+    transition: 0.3s;
+}
+
+#rmv:hover {
+    background-color: rgb(78, 8, 8);
+}

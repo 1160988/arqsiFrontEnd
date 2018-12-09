@@ -1,0 +1,62 @@
+<div *ngIf="produto" class="tbl_ctr">
+  <h2>Detalhes</h2>
+  <div class="container">
+    <table>
+      <tr>
+        <th colspan="1">Nome</th>
+        <th colspan="1">Categoria</th>
+        <th colspan="1">Material</th>
+        <th colspan="1">Acabamento</th>
+        <th colspan="1">Altura</th>
+        <th colspan="1">Largura</th>
+        <th colspan="1">Profundidade</th>
+      </tr>
+      <tr>
+        <td><input [(ngModel)]="produto.nome" placeholder="nome"></td>
+        <td>
+          <select [(ngModel)]="produto.categoria.id" (change)="onCategoriaChanges()">
+            <option *ngFor="let cat of categorias" [value]="cat.id">
+              {{cat.descricao}}
+            </option>
+          </select>
+        </td>
+        <td>
+          <select [(ngModel)]="produto.material.id" (change)="onMaterialChanges()">
+            <option *ngFor="let mat of materials" [value]="mat.id">
+              {{mat.descricao}}
+            </option>
+          </select>
+        </td>
+        <td>
+          <select [(ngModel)]="produto.acabamentoId" (change)="saveChanges()">
+            <option *ngFor="let acab of produto.acabamentos" [value]="acab.id">
+              {{acab.descricao}}
+            </option>
+          </select>
+        </td>
+        <td><input [(ngModel)]="produto.dimensoes.dimAltura" (change)="updateDimensoes()" placeholder="altura"></td>
+        <td><input [(ngModel)]="produto.dimensoes.dimLargura" (change)="updateDimensoes()" placeholder="largura"></td>
+        <td><input [(ngModel)]="produto.dimensoes.dimProfundidade" (change)="updateDimensoes()" placeholder="profundidade"></td>
+      </tr>
+      <tr>
+        <td style="border-bottom: none; " colspan="7">
+          <p style="margin-bottom: 0;">Produtos Agregados Possíveis</p>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="7">
+          <select [(ngModel)]="produto.produtosFilho" (unfocus)="saveChanges()" multiple>
+            <option *ngFor="let prod of produtos" value="{{prod.id}}">{{prod.nome}}
+              | {{prod.categoria.descricao}} |
+              {{prod.material.descricao}} | {{prod.dimensoes.dimAltura}} x {{prod.dimensoes.dimLargura}} x
+              {{prod.dimensoes.dimProfundidade}}</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+    <div>
+      <button id="back_btn" (click)="goBack()" style="float: right;">Voltar Atrás</button>
+      <button id="back_btn" (click)="saveChanges()" style="float: right;">Confirmar</button>
+    </div>
+  </div>
+</div>
